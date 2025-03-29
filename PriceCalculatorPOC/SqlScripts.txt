@@ -1,0 +1,69 @@
+﻿use pricedemo;
+-- Seed data for Rooms
+INSERT INTO Rooms (Name)
+VALUES 
+('Living Room'),
+('Bedroom'),
+('Kitchen'),
+('Bathroom'),
+('Office');
+
+-- Seed data for InteriorElements
+INSERT INTO InteriorElements (Name, RoomId)
+VALUES
+('Sofa', 1),
+('Coffee Table', 1),
+('Bed', 2),
+('Wardrobe', 2),
+('Cabinet', 3),
+('Sink', 4),
+('Desk', 5);
+
+-- Seed data for CustomizationFeatures
+INSERT INTO CustomizationFeatures (Name, InteriorElementId)
+VALUES
+('Fabric', 1),
+('Color', 1),
+('Material', 2),
+('Size', 3),
+('Mirror', 4),
+('Handle Style', 5),
+('Countertop Material', 6),
+('Finish', 7);
+
+-- Seed data for FeatureFields
+INSERT INTO FeatureFields (Name, Price, Quantity, CustomizationFeatureId)
+VALUES
+('Cotton', 50.00, 10, 1),
+('Leather', 150.00, 8, 1),
+('Red', 0.00, 20, 2),
+('Blue', 0.00, 15, 2),
+('Wood', 80.00, 12, 3),
+('Large', 100.00, 5, 4),
+('Small', 50.00, 10, 4),
+('Silver Mirror', 200.00, 3, 5),
+('Gold Handle', 30.00, 25, 6),
+('Granite', 300.00, 5, 7),
+('Glossy Finish', 40.00, 8, 8);
+
+-- Seed data for FixedUnits
+INSERT INTO FixedUnits (Name)
+VALUES
+('Air Conditioner'),
+('Ceiling Fan'),
+('Light Bulb'),
+('Electrical Outlet'),
+('Floor Lamp'),
+('Wall Mounted Shelf');
+
+-- Seed data for FixedUnitFields
+INSERT INTO FixedUnitFields (Name, Price, Quantity, FixedUnitId)
+VALUES
+('Cooling Capacity', 400.00, 5, 1),
+('Speed Control', 100.00, 15, 2),
+('LED Bulb 15W', 10.00, 50, 3),
+('Socket', 5.00, 100, 4),
+('Lamp Frame', 150.00, 10, 5),
+('Floating Shelf', 50.00, 25, 6);
+
+SELECT * FROM Rooms;
